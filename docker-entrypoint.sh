@@ -12,4 +12,6 @@ cp rt4/* rt4_data/
 rm -rf rt4
 ln -s /opt/rt4_data rt4
 
+chown -R www-data:www-data /opt/rt4_data/
+
 exec "$@"
