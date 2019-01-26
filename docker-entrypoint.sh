@@ -11,6 +11,8 @@ fi
 
 : "${RT_WEB_PORT:=80}"
 
+RT_WEB_URL="${RT_WEB_URL//\//\\/}"
+
 sed -i "s/RT_WEB_PORT/$RT_WEB_PORT/" /opt/rt4_data/etc/RT_SiteConfig.pm
 sed -i "s/RT_WEB_URL/$RT_WEB_URL/" /opt/rt4_data/etc/RT_SiteConfig.pm
 
