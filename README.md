@@ -1,3 +1,5 @@
+! readme depreciated
+
 [![Travis CI](https://img.shields.io/travis/cloos/docker-rt/master.svg)](https://travis-ci.org/cloos/docker-rt-base)
 [![Docker Stars](https://img.shields.io/docker/stars/netsandbox/request-tracker.svg)](https://hub.docker.com/r/netsandbox/request-tracker/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/netsandbox/request-tracker.svg)](https://hub.docker.com/r/netsandbox/request-tracker/)
