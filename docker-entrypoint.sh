@@ -8,7 +8,7 @@ if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   cd /opt
   echo "rt4:"
   ls rt4/
-  cp rt4/* rt4_data/
+  cp -r rt4/* rt4_data/
   echo "rt4_data:"
   ls rt4_data/
   rm -rf rt4
