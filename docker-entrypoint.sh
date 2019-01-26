@@ -16,13 +16,13 @@ if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   ls rt4_data/
   
   /etc/init.d/postfix stop
-
-  rm -rf rt4
-  ln -s /opt/rt4_data rt4
   
   /etc/init.d/postfix start
 fi
 
+rm -rf /opt/rt4
+ln -s /opt/rt4_data rt4
+  
 echo "---- ls opt"
 ls -al /opt/
 
@@ -33,6 +33,6 @@ RT_WEB_URL="${RT_WEB_URL//\//\\/}"
 sed -i "s/RT_WEB_PORT/$RT_WEB_PORT/" /opt/rt4_data/etc/RT_SiteConfig.pm
 sed -i "s/RT_WEB_URL/$RT_WEB_URL/" /opt/rt4_data/etc/RT_SiteConfig.pm
 
-chown -R www-data:www-data /opt/
+chown -R www-data:www-data /opt/rt4_data
 
 exec "$@"
