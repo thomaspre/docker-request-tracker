@@ -2,12 +2,20 @@
 
 set -euo pipefail
 
-if [ ! -f /opt/rt4_data/etc/RT_SiteConfig.pm ]; then
+ls -al /opt/
+
+if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   cd /opt
+  echo "rt4:"
+  ls rt4/
   cp rt4/* rt4_data/
+  echo "rt4_data:"
+  ls rt4_data/
   rm -rf rt4
   ln -s /opt/rt4_data rt4
 fi
+
+ls -al /opt/
 
 : "${RT_WEB_PORT:=80}"
 
