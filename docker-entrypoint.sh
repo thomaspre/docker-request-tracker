@@ -7,10 +7,12 @@ ls -al /opt/
 if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   cd /opt
 
+  echo "---- ls rt4"
   ls rt4/
   
   cp -r rt4/* rt4_data/
   
+  echo "---- ls rt4_data"
   ls rt4_data/
   
   /etc/init.d/postfix stop
@@ -21,6 +23,7 @@ if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   /etc/init.d/postfix start
 fi
 
+echo "---- ls opt"
 ls -al /opt/
 
 : "${RT_WEB_PORT:=80}"
