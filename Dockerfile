@@ -2,8 +2,8 @@ FROM netsandbox/request-tracker-base
 
 LABEL maintainer="Christian Loos <cloos@netsandbox.de>"
 
-ENV RT_VERSION %%RT_VERSION%%
-ENV RT_SHA %%RT_SHA%%
+ENV RT_VERSION 4.4.3
+ENV RT_SHA 738ab43cac902420b3525459e288515d51130d85810659f6c8a7e223c77dadb1
 
 RUN cd /usr/local/src \
   && curl -sSL "https://download.bestpractical.com/pub/rt/release/rt-${RT_VERSION}.tar.gz" -o rt.tar.gz \
@@ -11,7 +11,7 @@ RUN cd /usr/local/src \
   && tar -xzf rt.tar.gz \
   && cd "rt-${RT_VERSION}" \
   && ./configure \
-    %%RT_CONFIGURE%%
+    --disable-gpg --disable-smime --enable-developer --enable-gd --enable-graphviz --with-db-type=SQLite \
   && make install \
   && make initdb \
   && rm -rf /usr/local/src/*
