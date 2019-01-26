@@ -13,13 +13,11 @@ if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   
   ls rt4_data/
   
-  /etc/init.d/httpd stop
   /etc/init.d/postfix stop
 
   rm -rf rt4
   ln -s /opt/rt4_data rt4
   
-  /etc/init.d/httpd start
   /etc/init.d/postfix start
 fi
 
