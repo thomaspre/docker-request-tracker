@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-if [ ! -f /opt/rt4/etc/RT_SiteConfig.pm ]; then
+if [ ! -f /opt/rt4_data/etc/RT_SiteConfig.pm ]; then
   cd /opt
   cp rt4/* rt4_data/
   rm -rf rt4
