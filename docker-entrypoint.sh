@@ -17,6 +17,8 @@ if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   
 fi
 
+sleep 120
+
 rm -rf /opt/rt4
 ln -s /opt/rt4_data rt4
   
