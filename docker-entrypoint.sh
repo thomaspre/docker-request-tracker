@@ -19,6 +19,7 @@ fi
 
 ls -al /etc/init.d/
 /etc/init.d/apache2 stop
+lsof +D /opt/rt4
   
 rm -rf /opt/rt4
 ln -s /opt/rt4_data rt4
