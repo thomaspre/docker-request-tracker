@@ -21,7 +21,7 @@ ls -al /etc/init.d/
 /etc/init.d/apache2 stop
 sleep 3
 
-su rm -rf /opt/rt4
+rm -rf /opt/rt4
 ln -s /opt/rt4_data rt4
 
 apache2-foreground
