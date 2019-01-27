@@ -17,12 +17,16 @@ if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   
 fi
 
-/etc/init.d/postfix stop
+ls -al /etc/init.d/
+
+#/etc/init.d/http stop
+#/etc/init.d/postfix stop
   
 rm -rf /opt/rt4
 ln -s /opt/rt4_data rt4
 
-/etc/init.d/postfix start
+#/etc/init.d/http start
+#/etc/init.d/postfix start
   
 echo "---- ls opt"
 ls -al /opt/
