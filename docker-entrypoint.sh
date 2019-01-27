@@ -19,11 +19,9 @@ fi
 
 ls -al /etc/init.d/
 /etc/init.d/apache2 stop
-  
-apt-get install lsof
-lsof +D /opt/rt4
+sleep 3
 
-rm -rf /opt/rt4
+sudo rm -rf /opt/rt4
 ln -s /opt/rt4_data rt4
 
 apache2-foreground
