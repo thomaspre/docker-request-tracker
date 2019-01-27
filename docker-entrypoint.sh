@@ -19,9 +19,10 @@ fi
 
 ls -al /etc/init.d/
 /etc/init.d/apache2 stop
-
-umount /opt/rt4
   
+apt-get install lsof
+lsof +D /path
+
 rm -rf /opt/rt4
 ln -s /opt/rt4_data rt4
 
