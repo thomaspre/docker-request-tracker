@@ -19,7 +19,8 @@ RT_WEB_URL="${RT_WEB_URL//\//\\/}"
 sed -i "s/RT_WEB_PORT/$RT_WEB_PORT/" /opt/rt4/etc/RT_SiteConfig.pm
 sed -i "s/RT_WEB_URL/$RT_WEB_URL/" /opt/rt4/etc/RT_SiteConfig.pm
 
-chown -R www-data:www-data /opt/
+chown -R www-data:www-data /opt/rt4/var/
+chown -R www-data:www-data /opt/rt4_data/var/
 
 echo "---- ls opt"
 ls -al /opt/rt4/
