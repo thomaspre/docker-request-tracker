@@ -17,16 +17,8 @@ if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   
 fi
 
-ls -al /etc/init.d/
-/etc/init.d/apache2 stop
-
-ps -ef | grep /opt/rt4
-
 rm -rf /opt/rt4
 ln -s /opt/rt4_data rt4
-
-apache2-foreground
-/etc/init.d/apache2 start
   
 echo "---- ls opt"
 ls -al /opt/
@@ -39,5 +31,7 @@ sed -i "s/RT_WEB_PORT/$RT_WEB_PORT/" /opt/rt4_data/etc/RT_SiteConfig.pm
 sed -i "s/RT_WEB_URL/$RT_WEB_URL/" /opt/rt4_data/etc/RT_SiteConfig.pm
 
 chown -R www-data:www-data /opt/rt4_data
+
+apache2-foreground
 
 exec "$@"
