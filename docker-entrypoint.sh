@@ -17,6 +17,8 @@ if [ ! -f "/opt/rt4_data/etc/RT_SiteConfig.pm" ]; then
   
 fi
 
+top
+
 ls -al /etc/init.d/
 
 #/etc/init.d/http stop
